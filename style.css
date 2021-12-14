@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+
+body{
+	background-color: black;
+}
+
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	color: white;
+}
+
+html{
+	font-family: 'Source Sans Pro', 'sans-serif;';
+}
+
+.container{
+	padding: 15px;
+	width:100%;
+	text-align: center;
+	overflow: hidden;
+}
+
+.title h1{
+	font-size: 100px;
+}
+
+.title h2{
+	font-size: 20px;
+
+	font-weight: 200;
+}
+
+
+#description p{
+	font-size: 40px;
+	line-height: 40px;
+}
+
+
+
+.timeline{
+	width: 80%;
+	height: auto;
+	margin: 0 auto;
+	max-width: 750px;
+	position: relative;
+}
+
+.timeline ul{
+	list-style: none;
+}
+
+.timeline ul li{
+	padding: 10px;
+	background-color: #1E1F22;
+	border-radius: 10px;
+	margin-bottom: 15px;
+	display: inline-block;
+}
+
+/*.timeline ul li:last-child{
+	margin-bottom: 0px;
+}*/
+
+.timeline-content h1{
+	font-size: 25px;
+	font-weight: 600;
+	line-height: 25px;
+	margin-bottom: 5px;
+}
+.timeline-content h1 {
+	text-align:left;
+	float:left;
+}
+
+.timeline-content h2{
+
+	font-size: 15px;
+	font-weight: 100;
+
+	text-align:right;
+	float:right;
+	*/
+}
+
+
+
+.timeline-content p{
+	float: left;
+	font-size: 20px;
+	text-align: left;
+	line-height: 25px;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+	/*.vl{
+		border-left: 6px solid green;
+		height: 310px;
+		margin: 0px;
+		position: absolute;
+		left: 50%;
+ }*/
+    .timeline::before{
+        content: "";
+        width: 2px;
+        height: 3500px;
+        background: white;
+        left: 50%;
+        transform: translate(-50%);
+        position: absolute;
+    }
+	.timeline ul li{
+		width: 50%;
+		margin-bottom: 100px;
+		position: relative;
+	}
+
+	.timeline ul li:nth-child(odd){
+		transform: translate(-30px);
+		float: left;
+		clear: right;
+	}
+
+	.timeline ul li:nth-child(even){
+		transform: translate(30px);
+		float: right;
+		clear: left;
+	}
+
+	.timeline ul li::after{
+        content: "";
+        width: 20px;
+        height: 20px;
+        background: white;
+        border-radius: 50%;
+        top: 0;
+        position: absolute;
+    }
+
+    .timeline ul li:nth-child(odd)::after{
+    	transform: translate(50%,-50%);
+    	right: -30px;
+
+    }
+
+    .timeline ul li:nth-child(even)::after{
+    	transform: translate(-50%,-50%);
+    	left: -30px;
+
+    }
+}
+
+
+#quote p{
+	font-style: italic;
+	  font-size: 40px;
+	  margin-bottom: 50px;
+} 
